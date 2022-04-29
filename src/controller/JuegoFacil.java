@@ -77,7 +77,7 @@ public class JuegoFacil implements Initializable{
 			posicionBolaY+=velocidadY;
 			
 			// La Superpoderosa IA
-			if(posicionBolaX < ancho - ancho  / 9) {
+			if(posicionBolaX < ancho - ancho  / 8) {
 				J2posicionY = posicionBolaY - alturaJugador / 2;
 			}  else {
 				J2posicionY =  posicionBolaY > J2posicionY + alturaJugador / 2 ?J2posicionY += 1: J2posicionY - 1;
@@ -94,12 +94,12 @@ public class JuegoFacil implements Initializable{
 			// Texto de los puntos
 						if(puntuacionJ1==0 && puntuacionJ2==0){
 							gc.strokeText("DALE CLICK", ancho / 2, largo / 3);
-							gc.strokeText("y la superpoderosa IA te pateara", ancho / 2, largo / 2);
+							gc.strokeText("Has seleccionado el modo Fácil", ancho / 2, largo / 2);
 						}else if(puntuacionJ1<puntuacionJ2) {
 							gc.strokeText(puntuacionJ1 + "\t-\t" + puntuacionJ2,ancho / 2, largo / 2);
-							gc.strokeText("ASI ME GUSTA, PERDIENDO MALOTE", ancho / 2, largo / 3);
+							gc.strokeText("Parece que vas perdiendo :P", ancho / 2, largo / 3);
 						}else if(puntuacionJ1>puntuacionJ2){
-							gc.strokeText("No te pases ni un pelo chaval", ancho / 2, largo / 3);
+							gc.strokeText("Vas ganando, lo normal en el modo fácil", ancho / 2, largo / 3);
 							gc.strokeText(puntuacionJ1 + "\t-\t" + puntuacionJ2,ancho / 2, largo / 2);
 						}else {
 							gc.strokeText("EMPATITO ¬¬", ancho / 2, largo / 3);
